@@ -1,0 +1,50 @@
+@import url(reset.css);
+
+.blue {
+    color: blue;
+}
+
+.yellow {
+    color: yellow;
+}
+
+main p {
+    color: yellow;
+}
+
+main span {
+    color: blue;
+}
+
+/*тут я експериментував*/
+main ~ div h2 span {
+    color: yellow;
+}
+main ~ div h2 > span {
+    color: blue;
+}
+/*не знаю чи можна так робити у справжній верстці, але було цікаво можливо так зробити чи ні*/
+
+div.text {
+    color: blue;
+}
+
+div.text span {
+    color: yellow;
+}
+
+/*тут просто тестував-перевіряв пріоритетність*/
+#dash {
+    color: #ff0000 !important;
+}
+div #dash {
+    color: #d700ff;
+}
+#dash {
+    color: #21ff00;
+}
+/*
+не лайте з приводу !important я зрозумів, що його краще не використовувати без причини.
+Наприклад: якщо хочемо перезаписати стилі js, який в свою чергу прописує їх у сам тег в атрибут style.
+сподіваюся я все правильно зрозумів =)
+*/
